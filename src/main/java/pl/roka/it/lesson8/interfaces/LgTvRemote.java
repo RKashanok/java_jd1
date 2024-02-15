@@ -12,4 +12,9 @@ public class LgTvRemote extends TvRemote implements Remote {
     void doSmth() {
         System.out.println("LG TvRemote Doing something");
     }
+
+    @Override
+    public String brand() {
+        return "LG";
+    }
 }
