@@ -14,7 +14,6 @@ public class Car {
     int mileage;
 
     boolean isCarGood(Predicate<Car> predicate) {
-        var test = "qwe";
         return predicate.test(this);
     }
 
