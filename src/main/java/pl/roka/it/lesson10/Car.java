@@ -1,11 +1,16 @@
 package pl.roka.it.lesson10;
 
 import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
 
 import java.io.Serializable;
 import java.util.Objects;
 
-@Data
+@Getter
+@Setter
+@ToString
 public class Car implements Cloneable, Serializable, Comparable<Car> {
 
     transient int year;
@@ -29,6 +34,18 @@ public class Car implements Cloneable, Serializable, Comparable<Car> {
     @Override
     public int compareTo(Car o) {
         return this.year - o.year;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Car car)) return false;
+        return year == car.year && Objects.equals(brand, car.brand) && Objects.equals(model, car.model) && Objects.equals(engine, car.engine);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(year, brand, model, engine);
     }
 
     @Data
