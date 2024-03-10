@@ -1,25 +1,59 @@
 package pl.roka.it.lesson14;
 
-import com.google.common.collect.Lists;
-import pl.roka.it.lesson10.Car;
-
-import java.util.*;
-import java.util.concurrent.ArrayBlockingQueue;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Iterator;
+import java.util.List;
 
 public class BaseCollection {
 
     public static void main(String[] args) {
-//        List<Integer> ints = new ArrayList<>();
+        List<Integer> ints = new ArrayList<>();
 //        List<Integer> ints2 = new LinkedList<>();
 //        List<Integer> ints3 = new Vector<>();
 //        List<Integer> ints4 = new Stack<>();
-//
-//        ints.add(5);
-//        ints.add(6);
-//        ints.add(7);
-//        ints.add(8);
-//        ints.add(9);
-//        ints.add(2, 10);
+
+        ints.add(5);
+        ints.add(6);
+        ints.add(7);
+        ints.add(8);
+        ints.add(9);
+
+        List<Integer> integers = Collections.unmodifiableList(ints);
+        integers.add(10);
+
+
+//        for (int i = 0; i < ints.size(); i++) {
+//            if (i == 2) {
+//                ints.remove(i);
+//            }
+//            System.out.println(ints.get(i));
+//        }
+
+//        Iterator<Integer> iterator = ints.iterator();
+//        while (iterator.hasNext()) {
+//            Integer next = iterator.next();
+//            if (next == 7) {
+//                iterator.remove();
+//            }
+//            System.out.println(next);
+//        }
+
+//        for(Integer i : ints) {
+//            if (i == 7) {
+//                ints.remove(i);
+//            }
+//            System.out.println(i);
+//        }
+
+//        ints.forEach( v -> {
+//            if (v == 7) {
+//                ints.remove(v);
+//            }
+//            System.out.println(v);
+//        });
+
+
 //
 //        ints2.add(5);
 //        ints2.add(6);
@@ -53,6 +87,9 @@ public class BaseCollection {
 //            stringSet.add(s);
 //            System.out.println(s);
 //        }
+//
+//        stringSet.forEach(System.out::println);
+//
 //        System.out.println();
 
 //        stringSet.iterator().forEachRemaining(System.out::println);
@@ -72,7 +109,6 @@ public class BaseCollection {
 //        System.out.println(queue);
 //        queue.offer("5");
 //        System.out.println(queue);
-
 
 
 //        Map<String, Object> cars = new HashMap();

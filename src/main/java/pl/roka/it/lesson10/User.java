@@ -1,6 +1,7 @@
 package pl.roka.it.lesson10;
 
 import java.io.Serializable;
+import java.util.Objects;
 
 public final class User implements Cloneable, Serializable {
 
@@ -44,6 +45,18 @@ public final class User implements Cloneable, Serializable {
         User clone = (User) super.clone();
         clone.setCar(new Car(this.car.year, this.car.brand, this.car.model));
         return clone;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof User user)) return false;
+        return Objects.equals(name, user.name);
+    }
+
+    @Override
+    public int hashCode() {
+        return 42;
     }
 
     @Override

@@ -45,7 +45,7 @@ public class Car implements Cloneable, Serializable, Comparable<Car> {
 
     @Override
     public int hashCode() {
-        return Objects.hash(year, brand, model, engine);
+        return 42;
     }
 
     @Data
