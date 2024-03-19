@@ -1,0 +1,2 @@
+Это просто какая-то строка на кирилице
+This is simple latin text
