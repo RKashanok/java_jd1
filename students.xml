@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+
+<!DOCTYPE students [
+        <!ELEMENT students (student)*>
+        <!ELEMENT student (name|phone|address)*>
+        <!ATTLIST student
+                faculty CDATA #REQUIRED
+                login CDATA #IMPLIED>
+        <!ELEMENT name (#PCDATA)>
+        <!ELEMENT phone (#PCDATA)>
+        <!ELEMENT address (country|city|street)*>
+        <!ELEMENT country (#PCDATA)>
+        <!ELEMENT city (#PCDATA)>
+        <!ELEMENT street (#PCDATA)>
+        ]>
+<students>
+    <student login="id1" faculty="PSF">
+        <name>Raman</name>
+        <phone>+375296600963</phone>
+        <phone>+375296060606</phone>
+        <address>
+            <country>Belarus</country>
+            <city>Minsk</city>
+            <street>Shorsa</street>
+        </address>
+    </student>
+
+    <student login="id2" faculty="PSF">
+        <name>Raman</name>
+        <phone>+375296600963</phone>
+        <phone>+375296060606</phone>
+        <address>
+            <country>Belarus</country>
+            <city>Minsk</city>
+            <street>Shorsa</street>
+        </address>
+    </student>
+</students>
